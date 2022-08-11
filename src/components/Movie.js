@@ -1,4 +1,5 @@
 import { Component } from "react";
+import SingleMovie from "./SingleMovie";
 
 export default class Movie extends Component {
     render() {
@@ -7,11 +8,7 @@ export default class Movie extends Component {
 
 
             this.props.movie.map(item =>
-                <>
-                    <p>i{item.title}</p>
-                    <p>{item.released_on}</p>
-                    <p>{item.popularity}</p>
-                </>
+                <SingleMovie movieData={item}></SingleMovie>
             )
         )
     }
